@@ -63,4 +63,18 @@ L.polygon(polygonCoords, {
 }).addTo(map).bindPopup("Polygon Example (Kolkata)");
 
 // Add circle marker
-const cMarker = L.circleMarker([27.16547342337483, 79.02465820312501]).addTo(map);
+// Define custom icon
+const icon = L.icon({
+  iconUrl: 'git.png',   // Make sure git.png is in the same folder as index.html
+  iconSize: [80, 60],   // width, height in pixels
+  iconAnchor: [40, 60], // point of the icon which corresponds to marker's location (optional)
+  popupAnchor: [0, -60] // where popup will open relative to the icon (optional)
+});
+
+// Add marker with custom icon
+const customMarker = L.marker(
+  [27.16547342337483, 79.02465820312501],
+  { icon: icon }
+).addTo(map);
+
+customMarker.bindPopup("Custom Git Icon Marker!");
