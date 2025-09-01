@@ -61,3 +61,6 @@ L.polygon(polygonCoords, {
   fillColor: "lightblue",
   fillOpacity: 0.6
 }).addTo(map).bindPopup("Polygon Example (Kolkata)");
+
+// Add circle marker
+const cMarker = L.circleMarker([27.16547342337483, 79.02465820312501]).addTo(map);
