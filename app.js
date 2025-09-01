@@ -62,7 +62,6 @@ L.polygon(polygonCoords, {
   fillOpacity: 0.6
 }).addTo(map).bindPopup("Polygon Example (Kolkata)");
 
-// Add circle marker
 // Define custom icon
 const icon = L.icon({
   iconUrl: 'git.png',   // Make sure git.png is in the same folder as index.html
@@ -71,10 +70,19 @@ const icon = L.icon({
   popupAnchor: [0, -60] // where popup will open relative to the icon (optional)
 });
 
-// Add marker with custom icon
-const customMarker = L.marker(
+// ----------------------
+// Markers
+// ----------------------
+const marker1 = L.marker(
   [27.16547342337483, 79.02465820312501],
   { icon: icon }
-).addTo(map);
+).bindPopup("Marker 1: Git Icon");
 
-customMarker.bindPopup("Custom Git Icon Marker!");
+const marker2 = L.marker(
+  [23.21547342337483, 77.07465820312501],
+  { icon: icon }
+).bindPopup("Marker 2: Nearby Git Icon");
+
+// Group for markers
+const markerGroup = L.layerGroup([marker1, marker2]);
+markerGroup.addTo(map);
