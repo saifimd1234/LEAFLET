@@ -9,6 +9,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors',
 }).addTo(map);
 
+// code to get the coordinates when clicking on map
+map.on('click', function(e) {
+  alert("Lat: " + e.latlng.lat + ", Lng: " + e.latlng.lng);
+});
+
 // Add a marker with popup
 const marker = L.marker([28.6139, 77.2090]).addTo(map);
 marker.bindPopup("<b>Hello!</b><br>I am in Delhi.").openPopup();
