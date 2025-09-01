@@ -13,4 +13,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const marker = L.marker([28.6139, 77.2090]).addTo(map);
 marker.bindPopup("<b>Hello!</b><br>I am in Delhi.").openPopup();
 
-
+// Add circle layer
+const CLayer = L.circle([28.6139, 77.2090], {});
+CLayer.addTo(map);
