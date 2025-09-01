@@ -14,5 +14,5 @@ const marker = L.marker([28.6139, 77.2090]).addTo(map);
 marker.bindPopup("<b>Hello!</b><br>I am in Delhi.").openPopup();
 
 // Add circle layer
-const CLayer = L.circle([28.6139, 77.2090], {});
+const CLayer = L.circle([28.6139, 77.2090], {radius: 200000, color: '#e00707'});
 CLayer.addTo(map);
