@@ -1,0 +1,15 @@
+/* Basic page styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Map must have a fixed height, or it won’t show */
+#map {
+  height: 500px;
+  width: 100%;
+  margin: 10px auto;
+  border: 2px solid #444;
+  border-radius: 8px;
+}
