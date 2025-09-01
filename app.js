@@ -9,4 +9,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors',
 }).addTo(map);
 
+// Add a marker with popup
+const marker = L.marker([28.6139, 77.2090]).addTo(map);
+marker.bindPopup("<b>Hello!</b><br>I am in Delhi.").openPopup();
+
 
